@@ -2,13 +2,19 @@ using UnityEngine;
 
 public class GameManager : MonoBehaviour
 {
-    void Start()
+    public static GameManager Instance { get; private set; }
+    void Awake()
     {
-        
-    }
-
-    void Update()
-    {
-        
+        #region Singleton
+        if (Instance == null)
+        {
+            Instance = this;
+            DontDestroyOnLoad(this);
+        }
+        else
+        {
+            Destroy(this);
+        }
+        #endregion
     }
 }
