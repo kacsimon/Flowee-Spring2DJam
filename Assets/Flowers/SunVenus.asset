@@ -1,0 +1,22 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ca807c1b614380642adc11be0fc2717a, type: 3}
+  m_Name: SunVenus
+  m_EditorClassIdentifier: 
+  id: 5
+  flowerName: Sun Venus
+  description: 
+  seedPrefab: {fileID: 7190518013530688971, guid: 94a36687dabf8bf46bde31f2c1871125, type: 3}
+  seedlingPrefab: {fileID: 8080503963372175682, guid: 9a2a0a0da3c26a9438cf3aaab005dcb1, type: 3}
+  prefab: {fileID: 5766240904830269193, guid: 2dc0dd2fc91e4b144bdd6f34d97c85f5, type: 3}
+  fullyGrownPrefab: {fileID: 6330711309121013686, guid: e099800ff32a0ee4fbf4dce8145fee05, type: 3}
+  sprite: {fileID: 21300000, guid: bfb403165aefa2445b5398fe1b92556b, type: 3}
