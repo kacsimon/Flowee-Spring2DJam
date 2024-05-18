@@ -2,13 +2,21 @@ using UnityEngine;
 
 public class PlantGrower : MonoBehaviour
 {
-    void Start()
+    [SerializeField] Transform growPlace;
+    [SerializeField] GameObject plant;
+    [HideInInspector] public bool isEmpty = true;
+    public int potID;
+    void OnMouseDown()
     {
-        
+        if (isEmpty)
+        {
+            if (GameManager.Instance.plantToGrow == null) return;
+            Instantiate(plant, gameObject.transform);
+            isEmpty = false;
+        }
     }
-
-    void Update()
+    public GameObject GrowPlant(GameObject _plantToGrow, GameObject _parent)
     {
-        
+        return Instantiate(_plantToGrow, new Vector3(growPlace.position.x, _plantToGrow.transform.position.y, _plantToGrow.transform.position.z), _plantToGrow.transform.rotation, _parent.transform);
     }
 }

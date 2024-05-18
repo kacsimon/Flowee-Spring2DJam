@@ -143,3 +143,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2bf387ee70f40884e9acf851b4e75d1d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  growPlace: {fileID: 8468457465680640495}
+  plant: {fileID: 3111609926171688261, guid: 9fd2628b65e954242ad12ec163d87612, type: 3}
+  isEmpty: 1
+  potID: 0
