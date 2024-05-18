@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.EventSystems;
 
 public class Plant : MonoBehaviour
 {
@@ -36,6 +37,7 @@ public class Plant : MonoBehaviour
     }
     public void OnMouseDown()
     {
+        if (EventSystem.current.IsPointerOverGameObject()) return;
         switch (growingState)
         {
             case GrowingStates.Seed:
@@ -84,5 +86,6 @@ public class Plant : MonoBehaviour
         GameManager.Instance.IsThurtsy();
         boxCollider.enabled = false;
         timer = Random.Range(15f, 20f);
+        //Play water sound
     }
 }

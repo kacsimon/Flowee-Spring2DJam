@@ -3,9 +3,6 @@ using UnityEngine;
 public class AudioManager : MonoBehaviour
 {
     public static AudioManager Instance { get; private set; }
-
-    [SerializeField] AudioSource musicSource;
-    [SerializeField] AudioClip backgroundMusic;
     void Awake()
     {
         #region Singleton

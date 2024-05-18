@@ -8,6 +8,7 @@ public class GameManager : MonoBehaviour
     [SerializeField] GameObject pot1Water, pot2Water, pot3Water;
     [HideInInspector] public bool pot1Thursty, pot2Thursty, pot3Thursty;
     [SerializeField] GameObject[] flowerCards;
+    [SerializeField] GameObject catalogue;
 
     void Awake()
     {

@@ -6,15 +6,15 @@ public class PlantSelecter : MonoBehaviour
 
     public void SelectFlower()
     {
-        if (GameManager.Instance.plantToGrow == null)
-        {
-            GameManager.Instance.plantToGrow = plantToGrow;
-            //Show Selected
-        }
-        else
+        if (GameManager.Instance.plantToGrow == plantToGrow)
         {
             GameManager.Instance.plantToGrow = null;
             //Don't show selected
+        }
+        else
+        {
+            GameManager.Instance.plantToGrow = plantToGrow;
+            //Show Selected
         }
     }
 }
