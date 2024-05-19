@@ -14,7 +14,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   id: 3
   flowerName: Million Bell
-  description: 
+  description: Some Calibrachoa are cultivated as ornamental plants, popularly known
+    as "Million Bells". The plants can tolerate light frost and thrive in sun or
+    semi-shade. Plant in a free-draining soil and water only when the soil is almost
+    dry.
   seedPrefab: {fileID: 7190518013530688971, guid: 94a36687dabf8bf46bde31f2c1871125, type: 3}
   seedlingPrefab: {fileID: 8080503963372175682, guid: 9a2a0a0da3c26a9438cf3aaab005dcb1, type: 3}
   prefab: {fileID: 5992341919802565506, guid: 02a8e246430e2184f8e19802b153b943, type: 3}

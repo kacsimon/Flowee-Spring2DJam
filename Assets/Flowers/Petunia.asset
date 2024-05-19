@@ -14,7 +14,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   id: 4
   flowerName: Petunia
-  description: 
+  description: Petunias can tolerate relatively harsh conditions and hot climates,
+    but not frost. They need at least five hours of sunlight every day and flourish
+    in moist soil and conditions of low atmospheric humidity. They are best grown
+    from seed.
   seedPrefab: {fileID: 7190518013530688971, guid: 94a36687dabf8bf46bde31f2c1871125, type: 3}
   seedlingPrefab: {fileID: 8080503963372175682, guid: 9a2a0a0da3c26a9438cf3aaab005dcb1, type: 3}
   prefab: {fileID: 3033258548954334907, guid: 32090a24cd9c6a64483239e2b8add911, type: 3}

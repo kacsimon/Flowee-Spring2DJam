@@ -87,5 +87,6 @@ public class Plant : MonoBehaviour
         boxCollider.enabled = false;
         timer = Random.Range(15f, 20f);
         //Play water sound
+        AudioManager.Instance.PlayAudio("Watering");
     }
 }

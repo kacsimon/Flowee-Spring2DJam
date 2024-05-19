@@ -9,6 +9,8 @@ public class GameManager : MonoBehaviour
     [HideInInspector] public bool pot1Thursty, pot2Thursty, pot3Thursty;
     [SerializeField] GameObject[] flowerCards;
     [SerializeField] GameObject catalogue;
+    public Transform selectedPrefab;
+    [HideInInspector] public Transform selected;
 
     void Awake()
     {

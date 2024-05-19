@@ -9,12 +9,18 @@ public class PlantSelecter : MonoBehaviour
         if (GameManager.Instance.plantToGrow == plantToGrow)
         {
             GameManager.Instance.plantToGrow = null;
-            //Don't show selected
+            ClearSelection();
         }
         else
         {
             GameManager.Instance.plantToGrow = plantToGrow;
+            ClearSelection();
             //Show Selected
+            GameManager.Instance.selected = Instantiate(GameManager.Instance.selectedPrefab, transform);
         }
+    }
+    void ClearSelection()
+    {
+        if (GameManager.Instance.selected != null) Destroy(GameManager.Instance.selected.gameObject);
     }
 }
