@@ -63,6 +63,7 @@ public class Plant : MonoBehaviour
                 GameManager.Instance.CreateCard(flowerSO);
                 plantGrower.isEmpty = true;
                 Destroy(gameObject);
+                GameManager.Instance.AddCoinToText(flowerSO.earn);
                 break;
         }
     }

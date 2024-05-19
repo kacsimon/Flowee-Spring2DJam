@@ -1,8 +1,13 @@
 using UnityEngine;
+using TMPro;
+using System;
+using System.Collections;
 
 public class GameManager : MonoBehaviour
 {
     public static GameManager Instance { get; private set; }
+
+    public static event EventHandler OnPlanted;
 
     [HideInInspector] public FlowerSO plantToGrow;
     [SerializeField] GameObject pot1Water, pot2Water, pot3Water;
@@ -11,6 +16,10 @@ public class GameManager : MonoBehaviour
     [SerializeField] GameObject catalogue;
     public Transform selectedPrefab;
     [HideInInspector] public Transform selected;
+
+    int coin = 15;
+    public int Coin { get { return coin < 0 ? 0 : coin; } private set { coin = value; } }
+    [SerializeField] TMP_Text coinText;
 
     void Awake()
     {
@@ -25,9 +34,14 @@ public class GameManager : MonoBehaviour
             Destroy(this);
         }
         #endregion
+        Coin = coin;
         pot1Water.SetActive(false);
         pot2Water.SetActive(false);
         pot3Water.SetActive(false);
+    }
+    void Start()
+    {
+        UpdateUI();
     }
     public void IsThurtsy()
     {
@@ -45,6 +59,26 @@ public class GameManager : MonoBehaviour
                 flowerCard.imageColor = Color.white;
                 flowerCard.SetCardData();
             }
+        }
+    }
+    void UpdateUI()
+    {
+        coinText.text = Coin.ToString();
+    }
+    public void AddCoinToText(int _coin)
+    {
+        StartCoroutine(CountCoin(_coin));
+        //Check what can buy
+    }
+    public IEnumerator CountCoin(int _coin)
+    {
+        int scoreToBe = Coin + _coin;
+        while (Coin != scoreToBe)
+        {
+            Coin = _coin > 0 ? Coin + 1 : Coin - 1;
+            UpdateUI();
+            yield return new WaitForSeconds(.01f);
+            OnPlanted?.Invoke(this, EventArgs.Empty);
         }
     }
 }

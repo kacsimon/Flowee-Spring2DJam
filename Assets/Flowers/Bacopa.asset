@@ -17,6 +17,8 @@ MonoBehaviour:
   description: Some of these species are commonly used in freshwater aquariums and
     ponds in warmer climates. Most are easy to grow and will tolerate a wide range
     of conditions.
+  cost: 10
+  earn: 16
   seedPrefab: {fileID: 7190518013530688971, guid: 94a36687dabf8bf46bde31f2c1871125, type: 3}
   seedlingPrefab: {fileID: 8080503963372175682, guid: 9a2a0a0da3c26a9438cf3aaab005dcb1, type: 3}
   prefab: {fileID: 623369077755428847, guid: 68333c97a52bf7f48bf2d20c3879179a, type: 3}

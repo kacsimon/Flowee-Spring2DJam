@@ -17,6 +17,8 @@ MonoBehaviour:
   description: The genus Lobelia comprises a substantial number of large and small
     annual, perennial and shrubby species, hardy and tender, from a variety of habitats,
     in a range of colours. Many species appear totally dissimilar from each other.
+  cost: 5
+  earn: 8
   seedPrefab: {fileID: 7190518013530688971, guid: 94a36687dabf8bf46bde31f2c1871125, type: 3}
   seedlingPrefab: {fileID: 8080503963372175682, guid: 9a2a0a0da3c26a9438cf3aaab005dcb1, type: 3}
   prefab: {fileID: 5811639353610838667, guid: cd6ae714489303d48935a1806c273790, type: 3}

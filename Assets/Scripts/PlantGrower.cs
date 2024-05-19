@@ -1,3 +1,4 @@
+using System;
 using UnityEngine;
 
 public class PlantGrower : MonoBehaviour
@@ -11,6 +12,7 @@ public class PlantGrower : MonoBehaviour
         if (isEmpty)
         {
             if (GameManager.Instance.plantToGrow == null) return;
+            GameManager.Instance.AddCoinToText(-GameManager.Instance.plantToGrow.cost);
             Instantiate(plant, gameObject.transform);
             isEmpty = false;
         }
