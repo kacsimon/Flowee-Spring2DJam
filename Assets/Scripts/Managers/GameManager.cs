@@ -68,7 +68,6 @@ public class GameManager : MonoBehaviour
     public void AddCoinToText(int _coin)
     {
         StartCoroutine(CountCoin(_coin));
-        //Check what can buy
     }
     public IEnumerator CountCoin(int _coin)
     {
@@ -78,7 +77,7 @@ public class GameManager : MonoBehaviour
             Coin = _coin > 0 ? Coin + 1 : Coin - 1;
             UpdateUI();
             yield return new WaitForSeconds(.01f);
-            OnPlanted?.Invoke(this, EventArgs.Empty);
         }
+        OnPlanted?.Invoke(this, EventArgs.Empty);
     }
 }

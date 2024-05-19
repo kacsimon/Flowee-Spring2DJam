@@ -43,6 +43,5 @@ public class PlantSelecter : MonoBehaviour
     void CanBuy()
     {
         button.interactable = GameManager.Instance.Coin >= plantToGrow.cost;
-        Debug.Log(GameManager.Instance.Coin);
     }
 }
